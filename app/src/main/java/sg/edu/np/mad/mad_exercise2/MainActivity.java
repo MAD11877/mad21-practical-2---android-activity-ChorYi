@@ -15,12 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button btn = findViewById(R.id.flwbutton);
 
-        User ur = UserDetails();
+        User ur = new User("MAD", "Week 2 practical", 1, false);
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                //);
                 if (ur.followed == false) {
                     ur.followed = true;
                 } else {
@@ -31,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public User UserDetails() {
+    /* public User UserDetails() {
         User ur = new User("MAD", "Week 2 practical", 1, false);
         return ur;
-    }
+    } */
 
     public void follow(User ur, Button btn) {
 
